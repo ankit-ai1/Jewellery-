@@ -1,0 +1,140 @@
+.page { width: 100%; background: var(--color-background); }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.section { padding: clamp(40px, 6vw, 72px) 0; }
+
+.sectionTitle {
+  font-family: var(--font-family-primary);
+  font-size: clamp(26px, 3.5vw, 38px);
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-secondary);
+  margin: 0 0 48px;
+  position: relative;
+}
+.sectionTitle::after {
+  content: '';
+  display: block;
+  width: 52px;
+  height: 2px;
+  background: var(--color-primary);
+  margin: 14px auto 0;
+}
+
+/* Methods */
+.methodsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.methodCard {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 36px 28px;
+  text-align: center;
+  transition: all 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+.methodCard::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--color-primary);
+}
+.methodCard:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(200,155,60,0.15); }
+.methodIcon { font-size: 36px; margin-bottom: 16px; }
+.methodName {
+  font-family: var(--font-family-primary);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin: 0 0 10px;
+}
+.methodTime { font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--color-text-tertiary); margin-bottom: 8px; }
+.methodPrice { font-size: 26px; font-weight: 700; color: var(--color-primary); font-family: var(--font-family-primary); margin-bottom: 4px; }
+.methodFree { font-size: 12px; color: #2D7A4F; font-weight: 600; margin-bottom: 16px; }
+.methodDetail { font-size: 13px; color: var(--color-text-secondary); line-height: 1.7; margin: 0; }
+
+/* Journey */
+.journeySection { padding: 72px 0; background: var(--color-secondary); }
+.journeySection .sectionTitle { color: #fff; }
+.journeySection .sectionTitle::after { background: var(--color-primary); }
+
+.stepsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+.step { text-align: center; padding: 0 20px; position: relative; }
+.stepNumber {
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  font-family: var(--font-family-primary);
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  background: var(--color-secondary);
+  position: relative;
+  z-index: 2;
+}
+.stepLine {
+  position: absolute;
+  top: 30px;
+  left: calc(50% + 30px);
+  right: calc(-50% + 30px);
+  height: 1px;
+  background: rgba(200,155,60,0.4);
+  z-index: 1;
+}
+.stepTitle { font-family: var(--font-family-primary); font-size: 17px; font-weight: 700; color: #fff; margin: 0 0 8px; }
+.stepDesc { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.7; margin: 0; }
+
+/* Banner */
+.bannerSection { padding: 0 0 72px; }
+.banner {
+  background: linear-gradient(135deg, #FFF9E6 0%, #F5F0E0 100%);
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+  padding: 32px 36px;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+.bannerIcon { font-size: 32px; flex-shrink: 0; }
+.banner strong { font-family: var(--font-family-primary); font-size: 18px; font-weight: 700; color: var(--color-secondary); display: block; margin-bottom: 6px; }
+.banner p { font-size: 14px; color: var(--color-text-secondary); margin: 0; line-height: 1.7; }
+
+/* FAQ grid */
+.faqGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.faqCard {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 24px 26px;
+}
+.faqQ { font-family: var(--font-family-primary); font-size: 16px; font-weight: 700; color: var(--color-secondary); margin: 0 0 10px; }
+.faqA { font-size: 13px; color: var(--color-text-secondary); line-height: 1.75; margin: 0; }
+
+@media (max-width: 1024px) {
+  .methodsGrid { grid-template-columns: repeat(2, 1fr); }
+  .stepsGrid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .stepLine { display: none; }
+}
+
+@media (max-width: 768px) {
+  .methodsGrid { grid-template-columns: 1fr; gap: 20px; }
+  .faqGrid { grid-template-columns: 1fr; }
+  .container { padding: 0 16px; }
+  .journeySection { padding: 48px 0; }
+  .bannerSection { padding: 0 0 48px; }
+}
+
+@media (max-width: 480px) {
+  .stepsGrid { grid-template-columns: 1fr; }
+  .banner { flex-direction: column; padding: 20px 16px; }
+  .methodCard { padding: 24px 20px; }
+}

@@ -1,0 +1,241 @@
+/* ====== Filter Bar (horizontal strip) ====== */
+.filterBar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 0;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+/* ====== FILTER & SORT Button ====== */
+.filterSortWrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.filterSortBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 1.5px solid #222;
+  background: transparent;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #222;
+  font-family: inherit;
+  transition: background 0.15s, color 0.15s;
+}
+
+.filterSortBtn:hover {
+  background: #111;
+  color: #fff;
+}
+
+.filterSortBtn.active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+/* ====== Dropdown Panel ====== */
+.panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 300;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 28px 24px;
+  min-width: 290px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.panelGroup {
+  margin-bottom: 22px;
+}
+
+.panelLabel {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: #888;
+  margin: 0 0 10px;
+}
+
+/* Sort list */
+.sortList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sortOpt {
+  text-align: left;
+  padding: 8px 10px;
+  background: transparent;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  color: #555;
+  font-family: inherit;
+  transition: background 0.1s, color 0.1s;
+  border-radius: 2px;
+}
+
+.sortOpt:hover {
+  background: #f4f4f4;
+  color: #111;
+}
+
+.sortOptActive {
+  background: #111;
+  color: #fff;
+}
+
+/* Price */
+.priceRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.priceDash {
+  color: #bbb;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.priceInput {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  font-size: 13px;
+  font-family: inherit;
+  color: #333;
+  background: #fafafa;
+}
+
+.priceInput:focus {
+  outline: none;
+  border-color: #888;
+  background: #fff;
+}
+
+/* Rating chips */
+.ratingRow {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.ratingChip {
+  padding: 5px 12px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  color: #555;
+  transition: all 0.1s;
+}
+
+.ratingChip:hover {
+  border-color: #111;
+  color: #111;
+}
+
+.ratingChipActive {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+/* Clear button */
+.clearBtn {
+  margin-top: 18px;
+  padding: 9px 0;
+  width: 100%;
+  background: transparent;
+  border: 1px solid #ddd;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: inherit;
+  color: #777;
+  transition: all 0.15s;
+}
+
+.clearBtn:hover {
+  border-color: #111;
+  color: #111;
+}
+
+/* ====== Category Pills ====== */
+.pills {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pill {
+  padding: 9px 20px;
+  border: 1px solid #ddd;
+  background: transparent;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: inherit;
+  color: #555;
+  transition: all 0.15s;
+}
+
+.pill:hover {
+  border-color: #111;
+  color: #111;
+}
+
+.pillActive {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+/* ====== Mobile ====== */
+@media (max-width: 768px) {
+  .filterBar {
+    gap: 10px;
+    padding: 14px 0;
+    margin-bottom: 28px;
+  }
+
+  .pills {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2px;
+  }
+
+  .pill {
+    flex-shrink: 0;
+    padding: 7px 14px;
+    font-size: 10px;
+  }
+
+  .panel {
+    min-width: 260px;
+    padding: 20px 18px;
+  }
+}

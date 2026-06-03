@@ -1,0 +1,305 @@
+﻿.collectionsLanding {
+  width: 100%;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+  width: 100%;
+  height: 500px;
+  background-color: #1c1208;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.55) 100%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  width: min(1400px, 100%);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.heroTitle {
+  font-size: clamp(34px, 4.5vw, 52px);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  color: #ffffff;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.7);
+}
+
+.heroSubtitle {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  line-height: 1.75;
+  max-width: 780px;
+  margin: 0 auto;
+  color: #ffffff;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.6);
+}
+
+/* ========== COLLECTIONS SECTION ========== */
+.collectionsSection {
+  padding: 80px 16px;
+  background: white;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionTitle {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0 0 16px;
+}
+
+.sectionDescription {
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 300;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.collectionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.collectionCard {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.collectionCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.cardImage {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.collectionCard:hover .cardImage img {
+  transform: scale(1.05);
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.collectionCard:hover .cardOverlay {
+  opacity: 1;
+}
+
+.cardContent {
+  padding: 24px 16px;
+  background: white;
+  text-align: center;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  letter-spacing: 0.5px;
+}
+
+.cardSubtitle {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666;
+  margin: 0 0 16px;
+  line-height: 1.5;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardButton {
+  background: #1a1205;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cardButton:hover {
+  background: #2a1a0f;
+  transform: scale(1.02);
+}
+
+/* ========== INFO SECTION ========== */
+.infoSection {
+  padding: 60px 16px;
+  background: #f9f7f4;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.infoCard {
+  text-align: center;
+}
+
+.infoTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  letter-spacing: 0.5px;
+}
+
+.infoText {
+  font-size: 14px;
+  font-weight: 300;
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .collectionsSection {
+    padding: 60px 16px;
+  }
+
+  .collectionsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+  }
+
+  .heroTitle {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 350px;
+  }
+
+  .collectionsSection {
+    padding: 40px 16px;
+  }
+
+  .sectionHeader {
+    margin-bottom: 40px;
+  }
+
+  .collectionsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .cardImage {
+    height: 250px;
+  }
+
+  .infoGrid {
+    gap: 24px;
+  }
+
+  .heroTitle {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 250px;
+  }
+
+  .heroTitle {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .heroSubtitle {
+    font-size: 12px;
+  }
+
+  .collectionsSection {
+    padding: 24px 12px;
+  }
+
+  .collectionsGrid {
+    gap: 12px;
+  }
+
+  .cardImage {
+    height: 200px;
+  }
+
+  .cardContent {
+    padding: 16px 12px;
+  }
+
+  .cardTitle {
+    font-size: 16px;
+  }
+
+  .infoSection {
+    padding: 40px 12px;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

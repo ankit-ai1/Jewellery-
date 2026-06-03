@@ -1,0 +1,38 @@
+.rating {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+  white-space: nowrap;
+}
+
+.stars--sm {
+  gap: 1px;
+}
+
+.star {
+  font-size: var(--font-size-lg);
+  line-height: 1;
+  transition: transform var(--transition-fast);
+}
+
+.star--filled {
+  color: var(--color-accent-orange);
+}
+
+.star--empty {
+  color: var(--color-border);
+}
+
+.count {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+}
+
+.count--sm {
+  font-size: 11px;
+}

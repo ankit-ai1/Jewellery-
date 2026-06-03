@@ -1,0 +1,214 @@
+/* ==================== COLOR PALETTE ==================== */
+:root {
+  /* Primary Colors */
+  --color-primary: #C89B3C;
+  --color-primary-light: #E8C97E;
+  --color-primary-dark: #A67A2D;
+
+  /* Secondary Colors */
+  --color-secondary: #1A1205;
+  --color-secondary-light: #3D2C0E;
+  --color-secondary-lighter: #5C4419;
+
+  /* Accent Colors */
+  --color-accent-green: #2D7A4F;
+  --color-accent-brown: #7C4A1E;
+  --color-accent-orange: #F59E0B;
+
+  /* Neutral Colors */
+  --color-background: #FFFCF5;
+  --color-surface: #FFFFFF;
+  --color-border: #E8DCC8;
+  --color-border-light: #F0E8D5;
+  --color-background-subtle: #FAF7F0;
+  --color-background-darker: #F7F0E4;
+
+  /* Text Colors */
+  --color-text-primary: #1A1205;
+  --color-text-secondary: #3D2C0E;
+  --color-text-tertiary: #888888;
+  --color-text-light: #AAAAAA;
+  --color-text-inverse: #FFFFFF;
+
+  /* Announcement Bar */
+  --color-announcement-bg: #1A1205;
+  --color-announcement-text: #E8C97E;
+
+  /* Semantic Colors */
+  --color-success: #2D7A4F;
+  --color-warning: #F59E0B;
+  --color-error: #DC2626;
+  --color-info: #2563EB;
+
+  /* ==================== TYPOGRAPHY ==================== */
+  /* Font Families */
+  --font-family-primary: 'Cormorant Garamond', serif;
+  --font-family-secondary: system-ui, -apple-system, sans-serif;
+
+  /* Font Sizes */
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 15px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 26px;
+  --font-size-4xl: 32px;
+  --font-size-5xl: 36px;
+  --font-size-6xl: 48px;
+
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 600;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line Heights */
+  --line-height-tight: 1;
+  --line-height-normal: 1.3;
+  --line-height-relaxed: 1.5;
+  --line-height-loose: 1.8;
+
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.01em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.5px;
+  --letter-spacing-wider: 1px;
+  --letter-spacing-widest: 2px;
+
+  /* ==================== SPACING ==================== */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-2xl: 24px;
+  --spacing-3xl: 32px;
+  --spacing-4xl: 40px;
+  --spacing-5xl: 48px;
+  --spacing-6xl: 64px;
+
+  /* Padding */
+  --padding-container-mobile: 16px;
+  --padding-container-tablet: 20px;
+  --padding-container-desktop: 24px;
+
+  /* ==================== BORDER RADIUS ==================== */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-full: 50%;
+
+  /* ==================== SHADOWS ==================== */
+  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.15);
+  --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+
+  /* ==================== TRANSITIONS & ANIMATIONS ==================== */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.3s ease;
+  --transition-slower: 0.4s ease;
+
+  /* ==================== Z-INDEX ==================== */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-tooltip: 600;
+  --z-notification: 700;
+  --z-header: 999;
+
+  /* ==================== BREAKPOINTS ==================== */
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* ==================== COMPONENT SIZES ==================== */
+  /* Container */
+  --container-width: 1280px;
+
+  /* Header */
+  --header-height: 68px;
+  --header-height-mobile: 56px;
+
+  /* Button */
+  --button-height: 40px;
+  --button-padding-x: 24px;
+  --button-padding-y: 10px;
+
+  /* Input */
+  --input-height: 40px;
+  --input-padding-x: 12px;
+  --input-padding-y: 8px;
+
+  /* Card */
+  --card-padding: 16px;
+}
+
+/* ==================== RESPONSIVE ADJUSTMENTS ==================== */
+
+/* Tablet Breakpoint */
+@media (max-width: 768px) {
+  :root {
+    --font-size-5xl: 28px;
+    --font-size-6xl: 36px;
+    --padding-container-desktop: var(--padding-container-tablet);
+    --header-height: var(--header-height-mobile);
+  }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 640px) {
+  :root {
+    --font-size-3xl: 20px;
+    --font-size-4xl: 24px;
+    --font-size-5xl: 24px;
+    --spacing-6xl: 48px;
+    --padding-container-desktop: var(--padding-container-mobile);
+  }
+}
+
+/* ==================== GLOBAL UTILITY CLASSES ==================== */
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.opacity-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.truncate-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.truncate-lines-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

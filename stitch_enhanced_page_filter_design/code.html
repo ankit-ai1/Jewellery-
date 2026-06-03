@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lumoria | New Arrivals</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e3e2e0",
+                        "inverse-surface": "#31302c",
+                        "surface": "#fdf9f2",
+                        "on-secondary-container": "#626361",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#c7c6c4",
+                        "secondary-container": "#e0e0dd",
+                        "on-background": "#1c1c18",
+                        "tertiary-fixed-dim": "#cac6c2",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#ebe8e1",
+                        "on-primary-container": "#4e3700",
+                        "surface-variant": "#e5e2db",
+                        "on-tertiary-container": "#3c3b39",
+                        "tertiary-container": "#a8a5a2",
+                        "background": "#fdf9f2",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#261900",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "primary": "#775a19",
+                        "inverse-on-surface": "#f4f0e9",
+                        "inverse-primary": "#e9c176",
+                        "primary-container": "#c5a059",
+                        "primary-fixed": "#ffdea5",
+                        "primary-fixed-dim": "#e9c176",
+                        "tertiary-fixed": "#e6e2de",
+                        "surface-tint": "#775a19",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#4e4639",
+                        "tertiary": "#605e5b",
+                        "surface-dim": "#dddad3",
+                        "on-secondary-fixed-variant": "#464745",
+                        "on-secondary-fixed": "#1a1c1a",
+                        "outline": "#7f7667",
+                        "surface-container-low": "#f7f3ec",
+                        "surface-container": "#f1ede6",
+                        "on-tertiary-fixed": "#1c1b19",
+                        "outline-variant": "#d1c5b4",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1c1c18",
+                        "secondary": "#5e5f5d",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e5e2db",
+                        "on-tertiary-fixed-variant": "#484644",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#fdf9f2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Libre Caslon Text"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "label-sm": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "body-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            user-select: none;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .product-card-image {
+            aspect-ratio: 4/5;
+            object-fit: cover;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(253, 249, 242, 0.2) 0%, rgba(253, 249, 242, 0.8) 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16">
+<button class="hover:opacity-70 transition-opacity duration-200 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md tracking-widest text-primary uppercase">LUMORIA</h1>
+<div class="flex gap-4">
+<button class="hover:opacity-70 transition-opacity duration-200 scale-95 active:scale-90 transition-transform md:flex hidden">
+<span class="material-symbols-outlined text-primary">search</span>
+</button>
+<button class="hover:opacity-70 transition-opacity duration-200 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-primary">shopping_bag</span>
+</button>
+</div>
+</header>
+<main class="pt-16 pb-24">
+<!-- Hero Section -->
+<section class="relative w-full h-[530px] flex flex-col items-center justify-center text-center px-margin-mobile overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Lumoria New Arrivals" class="w-full h-full object-cover opacity-30" data-alt="A sophisticated close-up of delicate gold jewelry arranged on a warm ivory stone surface. The lighting is soft and ethereal, capturing the shimmering reflections of fine necklaces and earrings. The overall aesthetic is one of quiet luxury, featuring a palette of cream, sand, and warm gold tones to evoke effortless radiance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3QIwm9SU6WE7DmfDclMzkndjcpyUzbetRi8tX7V-dVpDEBNncP-OJeSRSQ92_5PNeDYk2yRmezfhcBusg-aoRrKk-v-w-rtA0v7b09Pj2p2u-KIBbEGpf4T3MjH6yb-y9XJOV674mAz0cvsg_5jsE5ziMJ-I-Td1IBaSb_SMDcj967aQGqJW-gfcagA8AcTi4-H3snmGrRtWcwDttg4yoQDgacXcVVDHRMiF5FnO3BSd4w0tEZQ6bDfiuPs8nAR-1wmGq1v0-dSs"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-2xl space-y-4">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Effortless Radiance</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">New Arrivals</h2>
+<p class="font-body-md text-body-md text-on-surface-variant px-4">
+                    Discover the latest additions to our Demi-Fine collection. Crafted with precision, designed for everyday elegance.
+                </p>
+</div>
+</section>
+<!-- Filter & Categories -->
+<section class="sticky top-16 bg-surface z-40 py-4 px-margin-mobile border-b border-outline-variant flex items-center gap-4 overflow-x-auto hide-scrollbar">
+<button class="flex items-center gap-2 border border-outline px-4 py-2 h-10 flex-shrink-0 transition-all hover:bg-surface-container">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span class="font-label-sm text-label-sm">FILTER &amp; SORT</span>
+</button>
+<div class="flex gap-2">
+<button class="px-5 py-2 border border-outline-variant bg-on-surface text-surface font-label-sm text-label-sm flex-shrink-0">ALL</button>
+<button class="px-5 py-2 border border-outline-variant hover:border-outline font-label-sm text-label-sm flex-shrink-0">NECKLACES</button>
+<button class="px-5 py-2 border border-outline-variant hover:border-outline font-label-sm text-label-sm flex-shrink-0">BRACELETS</button>
+<button class="px-5 py-2 border border-outline-variant hover:border-outline font-label-sm text-label-sm flex-shrink-0">RINGS</button>
+<button class="px-5 py-2 border border-outline-variant hover:border-outline font-label-sm text-label-sm flex-shrink-0">EARRINGS</button>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="px-margin-mobile md:px-margin-desktop py-12">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-12 md:gap-x-gutter">
+<!-- Product Card 1 -->
+<article class="group cursor-pointer">
+<div class="relative overflow-hidden mb-4">
+<span class="absolute top-2 left-2 z-10 bg-on-surface text-surface px-2 py-1 font-label-sm text-[10px]">NEW</span>
+<button class="absolute top-2 right-2 z-10 hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-surface">favorite</span>
+</button>
+<img alt="Celestial Pendant" class="product-card-image w-full transition-transform duration-700 group-hover:scale-105" data-alt="A minimalist overhead shot of a 14k gold chain necklace with a small geometric pendant, resting on a textured linen background. The lighting is warm and direct, highlighting the fine texture of the metal. The scene is clean, spacious, and sophisticated, reflecting the high-end demi-fine jewellery brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBql2hhQYHljd72xvqwbcgCX3NNSs-pC--G8cc1SS9Z_4Kf5hjtryL0f86DWh-8hoHCbidQDwUoRlfMOjb5FGnOGiagBgor3Agi2Pt5pJiRgofFtXf3dmS61pvsuGhAuKKvFDtzTCfuI0HKhfzruAF3RtgZZP0CvLfk3W4nk14QJSeM7twmzKDd3aGgxoLRJoucSBVcaB0rZoR8Al2Q8LLPAcjGJm4zVe0FKNbq-0kIQ4IggK0yknci-tMGTEmkhVkwfZPimHmGtUw"/>
+</div>
+<div class="text-center space-y-1 px-2">
+<p class="font-label-sm text-[10px] text-primary uppercase tracking-wider">14k Gold</p>
+<h3 class="font-headline-md text-[18px] text-on-surface truncate">Celestial Pendant</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">$240.00</p>
+<button class="w-full mt-4 py-3 bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm transition-all hover:opacity-90 active:scale-[0.98]">ADD TO BAG</button>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="group cursor-pointer">
+<div class="relative overflow-hidden mb-4">
+<span class="absolute top-2 left-2 z-10 bg-on-surface text-surface px-2 py-1 font-label-sm text-[10px]">NEW</span>
+<button class="absolute top-2 right-2 z-10 hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-surface">favorite</span>
+</button>
+<img alt="Luna Hoops" class="product-card-image w-full transition-transform duration-700 group-hover:scale-105" data-alt="A detailed macro photograph of a pair of sterling silver hoop earrings with subtle hammer-texture. The earrings are displayed on a piece of smooth, dark obsidian glass, creating sharp, high-contrast reflections. The lighting is cold and clinical yet luxurious, emphasizing the clean lines and minimalist design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5nChltboxS85rVLV0fPvFi7P6WJ6E-63hV8UDmdYAxrILghQvwH9_t_aloveUHZKuh4Doyos8XpH43vcoppmWKAi9k4pTjVhsJxgw8rP9tWz1GHNv9_Wsq6mcOjt1gs3isgSdIX8u_CkECkAJ4TMMfsIpeuA-o4rG4yxARVgzSzwBWrjovTsbKheXteYtSTXAFDOi2frRkl7Bu5wqie3-nSpTmDGJwxRxX2uCQj53UWxAs8rScmTYxz_3dg1zChT5sm_NhmhrPkE"/>
+</div>
+<div class="text-center space-y-1 px-2">
+<p class="font-label-sm text-[10px] text-primary uppercase tracking-wider">Sterling Silver</p>
+<h3 class="font-headline-md text-[18px] text-on-surface truncate">Luna Hoops</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">$185.00</p>
+<button class="w-full mt-4 py-3 bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm transition-all hover:opacity-90 active:scale-[0.98]">ADD TO BAG</button>
+</div>
+</article>
+<!-- Product Card 3 -->
+<article class="group cursor-pointer">
+<div class="relative overflow-hidden mb-4">
+<span class="absolute top-2 left-2 z-10 bg-on-surface text-surface px-2 py-1 font-label-sm text-[10px]">NEW</span>
+<button class="absolute top-2 right-2 z-10 hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-surface">favorite</span>
+</button>
+<img alt="Trio Ring Set" class="product-card-image w-full transition-transform duration-700 group-hover:scale-105" data-alt="A high-fashion editorial shot of a stack of three distinct gold rings on a hand resting against a neutral sand background. The lighting creates soft shadows that define the rings' shapes—one thin band, one with a small pearl, and one wider textured band. The mood is serene, focused on textures and warm metal tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlWpa3Y1W_iHvAjYSvOJb8VVjDKFidex3GdbxZBzr8rPykjGhqKAqwDG2TlDb0ky8s8IAQE6V9o5PvEwvqxTgFLtjpvNbSsImztrb4cyJJBHVrhVBXz6uniZMq6OFSVvqEMGJWO90cMm51One76Ry-2Hx2meztRp9TG5R4v3ezgAmtgNgYbigErcy_wmHd74WW4UzxUFUMBkXEwEoH8fLHvRZMgoG7E5jW1RjIONeE1ZzWkhsXK90n5OGE-ehU_ZYkVF1q1G8bel4"/>
+</div>
+<div class="text-center space-y-1 px-2">
+<p class="font-label-sm text-[10px] text-primary uppercase tracking-wider">14k Gold</p>
+<h3 class="font-headline-md text-[18px] text-on-surface truncate">Trio Ring Set</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">$310.00</p>
+<button class="w-full mt-4 py-3 bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm transition-all hover:opacity-90 active:scale-[0.98]">ADD TO BAG</button>
+</div>
+</article>
+<!-- Product Card 4 -->
+<article class="group cursor-pointer">
+<div class="relative overflow-hidden mb-4">
+<span class="absolute top-2 left-2 z-10 bg-on-surface text-surface px-2 py-1 font-label-sm text-[10px]">NEW</span>
+<button class="absolute top-2 right-2 z-10 hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-surface">favorite</span>
+</button>
+<img alt="Emerald Wave Bracelet" class="product-card-image w-full transition-transform duration-700 group-hover:scale-105" data-alt="An elegant presentation of a delicate gold bracelet with a single small emerald stone. The bracelet is draped over a white marble pedestal. Bright, natural daylight floods the scene from the side, creating long, soft shadows and highlighting the rich green of the gemstone against the warm gold and cool marble." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN5k5467CyNdOfIC47jj_2QRRwK1GgFvXhCJdGnCeNDFtkBlwDrlB4Unneq2pRKof4CVKK-1pssHgJuN9X1yTQlnxBQcVyH9uBWuaE808P6XUabWns7vKJSrnhymHZE_Cg8cXdn87GAfYn5JhN5ZPuW8bfX8kKX7cHrPFvPraPMFFfWldSamKT84seB44D44owturp09_0G16rGXV4cYCvak8H2DxUErpfVIvCareojTu5rh__WBLB4Vm3JWWfJE8SV8_5AgMa71g"/>
+</div>
+<div class="text-center space-y-1 px-2">
+<p class="font-label-sm text-[10px] text-primary uppercase tracking-wider">14k Gold &amp; Emerald</p>
+<h3 class="font-headline-md text-[18px] text-on-surface truncate">Emerald Wave Bracelet</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">$275.00</p>
+<button class="w-full mt-4 py-3 bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm transition-all hover:opacity-90 active:scale-[0.98]">ADD TO BAG</button>
+</div>
+</article>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="bg-surface-container py-24 px-margin-mobile text-center">
+<div class="max-w-xl mx-auto space-y-8">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Join the Lumoria Club</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Be the first to explore new collections and receive exclusive invitations to our private seasonal events.</p>
+<form class="flex flex-col sm:flex-row gap-0 border-b border-on-surface mt-8" onsubmit="event.preventDefault()">
+<input class="flex-1 bg-transparent border-none focus:ring-0 py-4 font-body-md outline-none px-0" placeholder="Email Address" type="email"/>
+<button class="py-4 font-label-sm text-label-sm uppercase tracking-widest text-primary hover:opacity-70 transition-opacity whitespace-nowrap">SUBSCRIBE</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-inverse-surface w-full flex flex-col items-center py-20 px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">LUMORIA</h2>
+<nav class="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-12">
+<a class="font-body-md text-body-md text-secondary-fixed-variant hover:text-primary transition-colors duration-300" href="#">Customer Care</a>
+<a class="font-body-md text-body-md text-secondary-fixed-variant hover:text-primary transition-colors duration-300" href="#">Shipping &amp; Returns</a>
+<a class="font-body-md text-body-md text-secondary-fixed-variant hover:text-primary transition-colors duration-300" href="#">Sustainability</a>
+<a class="font-body-md text-body-md text-secondary-fixed-variant hover:text-primary transition-colors duration-300" href="#">Contact Us</a>
+</nav>
+<p class="font-body-md text-body-md text-secondary-fixed-variant opacity-80">© 2024 LUMORIA. ALL RIGHTS RESERVED.</p>
+</footer>
+<!-- Bottom Navigation Bar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface border-t border-outline-variant flex justify-around items-center h-16 pb-safe md:hidden">
+<button class="flex flex-col items-center justify-center text-primary font-bold transition-transform duration-200 scale-105">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-label-sm text-label-sm">Shop</span>
+</button>
+<button class="flex flex-col items-center justify-center text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-sm text-label-sm">Search</span>
+</button>
+<button class="flex flex-col items-center justify-center text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-label-sm text-label-sm">Wishlist</span>
+</button>
+<button class="flex flex-col items-center justify-center text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</button>
+</nav>
+<script>
+        // Subtle scroll behavior for header
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+                header.classList.add('shadow-sm');
+                header.classList.add('bg-surface/95');
+                header.classList.add('backdrop-blur-md');
+            } else {
+                header.classList.remove('shadow-sm');
+                header.classList.remove('bg-surface/95');
+                header.classList.remove('backdrop-blur-md');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Add some basic click interactions for wishlist
+        document.querySelectorAll('button .material-symbols-outlined').forEach(icon => {
+            if (icon.textContent === 'favorite') {
+                icon.parentElement.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isFilled = icon.style.fontVariationSettings.includes("'FILL' 1");
+                    icon.style.fontVariationSettings = isFilled ? "'FILL' 0" : "'FILL' 1";
+                    icon.classList.toggle('text-error', !isFilled);
+                });
+            }
+        });
+    </script>
+</body></html>

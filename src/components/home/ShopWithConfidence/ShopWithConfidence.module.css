@@ -1,0 +1,220 @@
+.section {
+  width: 100%;
+  padding: var(--spacing-6xl) 0;
+  background-color: var(--color-background);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+}
+
+.sectionTitle {
+  font-family: var(--font-family-primary);
+  font-size: clamp(28px, 3vw, 40px);
+  text-align: center;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.sectionSubtitle {
+  text-align: center;
+  color: var(--color-text-tertiary);
+  font-family: var(--font-family-primary);
+  font-style: italic;
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-4xl);
+}
+
+.trustGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-3xl);
+}
+
+.trustCard {
+  background-color: var(--color-background-alt);
+  padding: var(--spacing-3xl);
+  border-radius: var(--border-radius-lg);
+  text-align: center;
+  transition: all var(--transition-slow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.trustCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+  background-color: var(--color-background-alt);
+}
+
+.iconWrapper {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-2xl);
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: var(--border-radius-lg);
+}
+
+.icon {
+  font-size: 40px;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.cardTitle {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--spacing-md) 0;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.cardDescription {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1024px) {
+  .trustGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-2xl);
+  }
+
+  .trustCard {
+    padding: var(--spacing-2xl);
+    min-height: 280px;
+  }
+
+  .iconWrapper {
+    width: 72px;
+    height: 72px;
+  }
+
+  .icon {
+    font-size: 36px;
+  }
+
+  .cardTitle {
+    font-size: var(--font-size-base);
+  }
+
+  .cardDescription {
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--spacing-4xl) 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .sectionSubtitle {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .trustGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-2xl);
+  }
+
+  .trustCard {
+    padding: var(--spacing-2xl);
+    min-height: 280px;
+  }
+
+  .iconWrapper {
+    width: 68px;
+    height: 68px;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .icon {
+    font-size: 32px;
+  }
+
+  .cardTitle {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .cardDescription {
+    font-size: var(--font-size-sm);
+  }
+
+  .trustCard:hover {
+    transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .sectionTitle {
+    font-size: clamp(20px, 2.5vw, 28px);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .sectionSubtitle {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .trustGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .trustCard {
+    padding: var(--spacing-2xl);
+    min-height: 240px;
+  }
+
+  .iconWrapper {
+    width: 60px;
+    height: 60px;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .icon {
+    font-size: 28px;
+  }
+
+  .cardTitle {
+    font-size: var(--font-size-base);
+  }
+
+  .cardDescription {
+    font-size: var(--font-size-sm);
+  }
+
+  .trustCard:hover {
+    transform: translateY(-2px);
+  }
+}

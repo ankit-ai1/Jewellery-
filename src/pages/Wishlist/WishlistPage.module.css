@@ -1,0 +1,64 @@
+﻿.page {
+  background-color: var(--color-background);
+  padding: var(--spacing-3xl) 0;
+  min-height: 70vh;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--padding-container-desktop);
+}
+
+.title {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--spacing-2xl);
+}
+
+/* ==================== EMPTY WISHLIST ==================== */
+
+.emptyWishlist {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background);
+}
+
+.emptyContent {
+  text-align: center;
+  max-width: 400px;
+}
+
+.emptyIcon {
+  font-size: 80px;
+  margin-bottom: var(--spacing-lg);
+}
+
+.emptyContent h2 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.emptyContent p {
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 768px) {
+  .productsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: var(--spacing-lg);
+  }
+}
