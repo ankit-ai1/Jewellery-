@@ -7,6 +7,10 @@ const BlogDetails = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
+
   const blog = BLOGS.find((b) => b.slug === slug);
 
   if (!blog) {
