@@ -12,12 +12,16 @@ export const GIFTING_CATEGORIES = [
 const IMAGES = [
   'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80',
   'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80',
-  'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&q=80',
+  'https://res.cloudinary.com/dtg3lepr4/image/upload/v1780571854/ChatGPT_Image_Jun_4_2026_04_47_20_PM_z8nqkk.png',
   'https://images.unsplash.com/photo-1635767798638-3665a0a107fc?w=800&q=80',
   'https://images.unsplash.com/photo-1573408301185-9519f94a5d3a?w=800&q=80',
   'https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800&q=80',
   'https://images.unsplash.com/photo-1611107683227-e9060eccd846?w=800&q=80',
   'https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=800&q=80',
+  'https://res.cloudinary.com/dtg3lepr4/image/upload/v1780570814/ChatGPT_Image_Jun_4_2026_04_29_58_PM_iqbtyc.png',
+  'https://res.cloudinary.com/dtg3lepr4/image/upload/v1780570413/ChatGPT_Image_Jun_4_2026_04_23_21_PM_czlwsi.png',
+  'https://res.cloudinary.com/dtg3lepr4/image/upload/v1780570236/ChatGPT_Image_Jun_4_2026_04_20_14_PM_ts8lzl.png',
+  'https://res.cloudinary.com/dtg3lepr4/image/upload/v1780569214/ChatGPT_Image_Jun_4_2026_04_03_04_PM_twe69d.png',
 ];
 
 let id = 100;
@@ -32,12 +36,12 @@ const makeProduct = ({ name, price, tags = [], categories = [], imgIndex = 0 }) 
 
 export const GIFTING_PRODUCTS = [
   // Gifts For Her (8)
-  makeProduct({ name: 'Nova Diamond Pendant', price: 850, categories: ['Gifts For Her'], imgIndex: 0 }),
-  makeProduct({ name: 'Stardust Hoop Earrings', price: 420, categories: ['Gifts For Her'], imgIndex: 1 }),
+  makeProduct({ name: 'Nova Diamond Pendant', price: 850, categories: ['Gifts For Her'], imgIndex: 8 }),
+  makeProduct({ name: 'Stardust Hoop Earrings', price: 420, categories: ['Gifts For Her'], imgIndex: 9 }),
   makeProduct({ name: 'Aurora Solitaire Ring', price: 1200, categories: ['Gifts For Her'], imgIndex: 2 }),
-  makeProduct({ name: 'Solstice Chain Bracelet', price: 380, categories: ['Gifts For Her'], imgIndex: 3 }),
+  makeProduct({ name: 'Solstice Chain Bracelet', price: 380, categories: ['Gifts For Her'], imgIndex: 11 }),
   makeProduct({ name: 'Lyra Twisted Ring', price: 620, categories: ['Gifts For Her'], imgIndex: 4 }),
-  makeProduct({ name: 'Celestial Halo Bracelet', price: 540, categories: ['Gifts For Her'], imgIndex: 5 }),
+  makeProduct({ name: 'Celestial Halo Bracelet', price: 540, categories: ['Gifts For Her'], imgIndex: 10 }),
   makeProduct({ name: 'Moonrise Pendant', price: 470, categories: ['Gifts For Her'], imgIndex: 6 }),
   makeProduct({ name: 'Whisper Stud Earrings', price: 220, categories: ['Gifts For Her'], imgIndex: 7 }),
 

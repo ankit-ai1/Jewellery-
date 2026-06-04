@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { PRODUCTS } from '../../data/products';
+import { COLLECTIONS } from '../../data/collectionsData';
 import { useCart, useWishlist } from '../../hooks';
 import { formatPrice, calculateDiscount } from '../../utils/helpers';
 import Rating from '../../components/common/Rating/Rating';
@@ -15,7 +16,23 @@ const ProductDetailsPage = () => {
   const [quantity, setQuantity] = React.useState(1);
   const [selectedSize, setSelectedSize] = React.useState('');
 
-  const product = PRODUCTS.find((p) => p.id === parseInt(id));
+  let product = PRODUCTS.find((p) => p.id === parseInt(id));
+
+  if (!product) {
+    for (const collection of Object.values(COLLECTIONS)) {
+      const found = collection.products.find((p) => p.id === id);
+      if (found) {
+        product = {
+          ...found,
+          images: found.images || [found.image],
+          reviews: found.reviews ?? found.reviewCount ?? 0,
+          sizes: found.sizes || [],
+          material: found.material || '',
+        };
+        break;
+      }
+    }
+  }
 
   if (!product) {
     return (
